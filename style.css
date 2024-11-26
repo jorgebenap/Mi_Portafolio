@@ -74,27 +74,87 @@ section h2 {
 
 /*Habilidades*/
 #skills {
+  padding: 60px 20px;
+  background-color:var(--backgroundColor);
+}
+
+.skills-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-#skills div {
-  display: flex;
-  align-items: center;
-  justify-content: column;
+.skills-container div {
   background-color: var(--secondaryColor);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding:20px;
+  width: 150px;
+  text-align: center;
 }
 
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px auto;
-  display: block;
+/*Proyectos*/
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: var(--secondaryColor);
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+/*Contacto*/
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  justify-self: center;
+}
+
+.contact button {
+  width: 100px;
+  justify-self: center;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border: none;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #388e3c
 }
 
 footer {
